@@ -53,7 +53,7 @@ open class ScrollableSegmentedControl: UIControl {
         }
     }
     
-    override public var tintColor: UIColor! {
+  override open var tintColor: UIColor! {
         didSet {
             collectionView?.tintColor = tintColor
             reloadSegments()
@@ -253,7 +253,7 @@ open class ScrollableSegmentedControl: UIControl {
     
     // MARK: - Layout management
     
-    override public func layoutSubviews() {
+  override open func layoutSubviews() {
         super.layoutSubviews()
         
         collectionView?.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
