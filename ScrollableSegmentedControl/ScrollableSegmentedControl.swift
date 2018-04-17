@@ -17,7 +17,7 @@ public enum ScrollableSegmentedControlSegmentStyle: Int {
  A ScrollableSegmentedControl object is horizontaly scrollable control made of multiple segments, each segment functioning as discrete button.
  */
 @IBDesignable
-@objc public class ScrollableSegmentedControl: UIControl {
+@objc open class ScrollableSegmentedControl: UIControl {
     fileprivate let flowLayout = UICollectionViewFlowLayout()
     fileprivate var collectionView:UICollectionView?
     private var collectionViewController:CollectionViewController?
@@ -54,7 +54,7 @@ public enum ScrollableSegmentedControlSegmentStyle: Int {
         }
     }
     
-    override public var tintColor: UIColor! {
+  override open var tintColor: UIColor! {
         didSet {
             collectionView?.tintColor = tintColor
             reloadSegments()
@@ -254,7 +254,7 @@ public enum ScrollableSegmentedControlSegmentStyle: Int {
     
     // MARK: - Layout management
     
-    override public func layoutSubviews() {
+  override open func layoutSubviews() {
         super.layoutSubviews()
         
         collectionView?.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
