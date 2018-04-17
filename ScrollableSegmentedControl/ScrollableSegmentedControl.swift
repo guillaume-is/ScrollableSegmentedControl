@@ -16,7 +16,7 @@ public enum ScrollableSegmentedControlSegmentStyle {
  A ScrollableSegmentedControl object is horizontaly scrollable control made of multiple segments, each segment functioning as discrete button.
  */
 @IBDesignable
-public class ScrollableSegmentedControl: UIControl {
+open class ScrollableSegmentedControl: UIControl {
     fileprivate let flowLayout = UICollectionViewFlowLayout()
     fileprivate var collectionView:UICollectionView?
     private var collectionViewController:CollectionViewController?
